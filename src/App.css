@@ -1,38 +1,161 @@
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: fixed;
+  background-color: #18252af2;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#devices-page {
+  background-color: #eb6638;
+  height: 100%;
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#login-page {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  padding: 23px 17px 0px 17px;
+  border-radius: 0.15em;
+  box-shadow: 5px 5px 2px 0px #0000009e;
+}
+#login-title {
+  font-size: 2.8em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+  margin-bottom: 11.5px;
+  margin-top: 0;
+  transform: scale(1,1.05);
+}
+.email-password {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #e8ebef;
+  margin: 3px;
+  border-radius: 0.2em;
+  width: 100%;
+  height: 38px;
+}
+.email-password-image {
+  padding: 6px 10px;
+}
+.email-password-text {
+  border-color: #e8ebef;
+  border-width: 0px;
+  background-color: #e8ebef;
+  outline-style: none;
+  border-top-right-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+}
+#login-button {
+  width: 114px;
+  height: 41px;
+  color: #ffffff;
+  background-color: #1e7fcd;
+  border-width: 0px;
+  border-radius: 0.2em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 18px;
+}
+#login-button:hover {
+  cursor: pointer;
+}
+#circles-and-numbers {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+#solarsystem {
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid #000; */
+  position: relative;
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+}
+.planet {
+  width: 58px;
+  height: 58px;
+  /* line-height: 30px; */
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  background: #ffffff
+}
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+#deviceabout {
+  position: absolute;
+  text-align: center;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#devicenumber {
+  font-size: 4.5em;
+  font-weight: lighter;
+  line-height: 1em;
+  font-family: Calibri Light;
+}
+#devicetext {
+  font-size: 1em;
+  width: 100px;
+  font-family: Calibri;
+  line-height: 1em;
+  font-weight: 500;
+}
+#notify-and-logout {
+  background-color: #cb5e3b;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+#notify-and-logout-container {
+  width: 300px;
+  height: 50px;
+  display: flex;
+}
+.btn {
+  border: none;
+  border-radius: 0.4em;
+  height: 45px;
+  width: 150px;
+  font-size: 1em;
+  font-family: system-ui;
+  margin: 2.5px 5px 2.5px 2.5px;
+  font-weight: 625;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.notify {
+  color: #2e2626;
+  background-color: white;
+  font-weight: 625;
+}
+.logout {
+  color: white;
+  background-color: #2e2626;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
